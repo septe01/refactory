@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test 12 Refactory</title>
+</head>
+<body>
+	<div id="center">
+		<h2 id="jdl"></h2>
+		<h3>array</h3>
+		<h4 id="arr">fruits = [
+	  {name: 'Pepaya', price: 3000},<br>
+	  {name: 'Jagung', price: 2000},<br>
+	  {name: 'Mengkudu', price: 4000},<br>
+	  {name: 'Kiwi', price: 6000},
+	];</h4>
+	<h3>Hasil di Console</h3>
+		<div id="hsl"></div>
+	</div>
+<script>
+	var center = document.getElementById('center');
+	var jdl = document.getElementById('jdl');
+	var hsil = document.getElementById('hsl');
+
+	const fruits = [
+	  {'name': 'Pepaya', 'price': 3000},
+	  {'name': 'Jagung', 'price': 2000},
+	  {'name': 'Mengkudu', 'price': 4000},
+	  {'name': 'Kiwi', 'price': 6000}
+	];	
+	
+		
+		for(i=0; i < fruits.length; i++){
+			console.log(fruits[i].name+' : '+fruits[i].price);
+		}
+		
+	
+	jdl.innerHTML = "Array to String";
+	center.style.textAlign = "center";
+	
+</script>
+</body>
+</html>

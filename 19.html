@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test 19 Refactory</title>
+</head>
+<body>
+    <div id="center">
+        <h2 id="jdl"></h2>
+        <h4 id="arr">Result Console</h4>
+        <div id="hsl"></div>
+    </div>
+<script>
+    var center = document.getElementById('center');
+    var jdl = document.getElementById('jdl');
+
+    var rekur = parseInt(prompt('masukan angka :'));
+
+    rekursife(rekur)
+    function rekursife(n){
+    	if(n === 0){
+    		return; 
+    	}
+    	console.log(n);
+    	return rekursife(n-1);
+    }
+
+    jdl.innerHTML = "Recursive Function";
+    center.style.textAlign = "center";
+    
+</script>
+</body>
+</html>

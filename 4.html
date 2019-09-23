@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test 4 Refactory</title>
+</head>
+<body>
+	<div id="center">
+		<h2 id="jdl"></h2>
+		<button id="click">Click Me</button>
+	</div>
+
+<script>
+	var center = document.getElementById('center');
+	var jdl = document.getElementById('jdl');
+	var click = document.getElementById('click').addEventListener("click", function(){
+		var str = parseInt(prompt("menentukan tahun Kabisat :"));
+		
+		 if (str%400 == 0){
+		    alert(str+" Merupakan Tahun Kabisat")
+		  } else if(str%100 == 0){
+		    alert(str+ " Bukan Tahun Kabisat")
+		  } else if(str%4 == 0){
+		    alert(str+ " Merupakan Tahun Kabisat")
+		  } else {
+		    alert(str+ " Bukan Tahun kabisat")
+		  }
+
+	});
+	jdl.innerHTML = "Kabisat";
+	center.style.textAlign = "center";
+
+</script>
+</body>
+</html>

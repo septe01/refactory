@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test 23 Refactory</title>
+</head>
+<body>
+    <div id="center">
+        <h2 id="jdl"></h2>
+        <h4 id="arr">Result Console</h4>
+        <input type="text" id="text">
+        <div style="margin-top: 10px">
+        	<button id="in">In</button>
+        	<button id="out">Out</button>
+        </div>
+        <div id="hsl"></div>
+    </div>
+<script>
+    var center = document.getElementById('center');
+    var jdl = document.getElementById('jdl');
+    var text = document.getElementById('text');
+    var input = document.getElementById('in');
+    var out = document.getElementById('out');
+
+    var arr = [];
+    input.addEventListener('click',function(){
+    	var x = text.value;
+    	arr.unshift(x);
+    	console.log(arr);
+    });
+
+    out.addEventListener('click',function(){
+    	let x = text.value;
+    	arr.pop(x);
+    	console.log(arr);
+    });
+
+
+
+    jdl.innerHTML = "FIFO (First In First Out) a.k.a Queue";
+    center.style.textAlign = "center";
+    
+</script>
+</body>
+</html>

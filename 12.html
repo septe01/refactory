@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test 12 Refactory</title>
+</head>
+<body>
+	<div id="center">
+		<h2 id="jdl"></h2>
+		<h3></h3>
+		<button id="click">Click Me</button>
+		<h4 id="input"></h4>
+		<h4 id="hsl"></h4>
+	</div>
+<script>
+	var center = document.getElementById('center');
+	var jdl = document.getElementById('jdl');
+	var input = document.getElementById('input');
+	var hsil = document.getElementById('hsl');
+
+	var click = document.getElementById('click').addEventListener("click", function(){
+		var text = prompt("String :");
+		Mirror(text);
+	});
+
+	function Mirror(Mirror){
+
+		var rev = Mirror.split('').reverse().join('')
+
+		input.innerHTML = 'Mirror   '+ Mirror;
+		hsil.innerHTML = Mirror+''+rev;
+	}
+	jdl.innerHTML = "Mirror";
+	center.style.textAlign = "center";
+	
+</script>
+</body>
+</html>

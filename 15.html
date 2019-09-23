@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test 15 Refactory</title>
+</head>
+<body>
+	<div id="center">
+		<h2 id="jdl"></h2>
+		<h4 id="arr"></h4>
+		<div id="hsl"></div>
+	</div>
+<script>
+	var center = document.getElementById('center');
+	var jdl = document.getElementById('jdl');
+	var arr = document.getElementById('arr');
+	var hsil = document.getElementById('hsl');
+
+	// var secret; 
+
+	// while (secret !== "dimasukkan") {
+	//     secret = prompt("Masukan angka :");
+	    
+	//     var bil = parseInt(secret);
+
+
+	//     if (secret === "dimasukkan") {
+ //    		break;
+	// 	}
+	//   }
+	//   console.log(bil += bil)
+
+	
+
+	var angka = prompt("Masukan angka :");
+	if(parseInt(angka)){
+		while (angka !== "dimasukkan") {
+		    angka = prompt("Masukan angka :");
+		    alert(angka += angka)
+		    if (angka === "dimasukkan") {
+	    		break;
+			}
+		}
+
+	}else if(angka != true){
+		alert('bukan angka')
+	}
+	
+	jdl.innerHTML = "Penjumlahan";
+	center.style.textAlign = "center";
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test 5 Refactory</title>
+</head>
+<body>
+	<div id="center">
+		<h2 id="jdl"></h2>
+		<button id="click">Click Me</button>
+	</div>
+<script>
+	var center = document.getElementById('center');
+	var jdl = document.getElementById('jdl');
+	var click = document.getElementById('click').addEventListener("click", function(){
+		var str = parseInt(prompt("Film Rating :"));
+		
+		 if (str >= 21){
+		    alert(str+" DEWASA")
+		  } else if(str >= 13){
+		    alert(str+ " REMAJA")
+		  } else if(str >= 9){
+		    alert(str+ " BIMBINGAN ORANG TUA")
+		  } else if(str < 9){
+		    alert(str+ " SEMUA USIA")
+		  }
+
+	});
+	jdl.innerHTML = "Film Rating";
+	center.style.textAlign = "center";
+	
+</script>
+</body>
+</html>

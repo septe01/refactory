@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test 11 Refactory</title>
+</head>
+<body>
+	<div id="center">
+		<h2 id="jdl"></h2>
+		<h3></h3>
+		<button id="click">Click Me</button>
+		<h4 id="hsil"></h4>
+	</div>
+<script>
+	var center = document.getElementById('center');
+	var jdl = document.getElementById('jdl');
+	var hsil = document.getElementById('hsil');
+	const fruits = ['Jeruk', 'Pepaya', 'Jambu', 'Anggur', 'Melon'];
+	fruits.forEach(function(element) {
+	    hsil.innerHTML = fruits;
+	});
+	var click = document.getElementById('click').addEventListener("click", function(){
+		var ind1 = parseInt(prompt("index ke :"));
+		var ind2 = parseInt(prompt("Jumlah hapus :"));
+		Hapuss(ind1,ind2);
+	});
+
+	function Hapuss(index,indexs){
+		const fruits = ['Jeruk', 'Pepaya', 'Jambu', 'Anggur', 'Melon'];
+		fruits.splice(parseInt(index),parseInt(indexs));
+		console.log(fruits);
+		fruits.forEach(function(element) {
+		    hsil.innerHTML = fruits;
+		});
+	}
+	jdl.innerHTML = "Array Remover";
+	center.style.textAlign = "center";
+	
+</script>
+</body>
+</html>

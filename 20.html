@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test 20 Refactory</title>
+</head>
+<body>
+    <div id="center">
+        <h2 id="jdl"></h2>
+        <h4 id="arr">Result Console</h4>
+        <div id="hsl"></div>
+    </div>
+<script>
+    var center = document.getElementById('center');
+    var jdl = document.getElementById('jdl');
+
+    
+    var getType = (function() {
+
+    var objToString = ({}).toString ,
+        typeMap     = {},
+        types = [ 
+          "Boolean", 
+          "Integer", 
+          "String",                
+          "Function", 
+          "Array", 
+          "Date",
+          "RegExp", 
+          "Object", 
+          "Error"
+        ];
+
+    for ( var i = 0; i < types.length ; i++ ){
+        typeMap[ "[object " + types[i] + "]" ] = types[i].toLowerCase();
+            };    
+
+            return function( obj ){
+                if ( obj == null ) {
+                    return String( obj );
+                }
+                
+                return typeof obj === "object" || typeof obj === "function" ?
+                    typeMap[ objToString.call(obj) ] || "object" :
+                    typeof obj;
+            }
+        }());
+
+    console.log(getType('yess'))
+
+    jdl.innerHTML = "Data Type Detector";
+    center.style.textAlign = "center";
+    
+</script>
+</body>
+</html>

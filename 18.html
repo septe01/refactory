@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test 18 Refactory</title>
+</head>
+<body>
+    <div id="center">
+        <h2 id="jdl"></h2>
+        <h4 id="arr">Result Console</h4>
+        <div id="hsl"></div>
+    </div>
+<script>
+    var center = document.getElementById('center');
+    var jdl = document.getElementById('jdl');
+
+    const namaWilayah = ['Jakarta', 'Aceh', 'Malang', 'Medan', 'Bontang', 'Jogja', 'Jakarta', 'Bandung', 'Malang', 'Solo', 'Palembang', 'Bandung'];
+
+    let x = (namaWilayah) => namaWilayah.filter((v,i) => namaWilayah.indexOf(v) === i)
+    x(namaWilayah);
+
+console.log(x(namaWilayah));
+
+    jdl.innerHTML = "Duplicates Remover";
+    center.style.textAlign = "center";
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test 1 Refactory</title>
+</head>
+<body>
+<div id="center">
+	<h2 id="jdl"></h2>
+	<button id="click">Click Me</button>
+</div>
+
+
+<script>
+	var center = document.getElementById('center');
+	var jdl = document.getElementById('jdl');
+	var click = document.getElementById('click')
+	click.addEventListener("click", function(){
+		var str = prompt("masukan string :");
+		alert('jumlah string: '+str.length);
+	});
+	jdl.innerHTML = "Jumlah Karakter";
+	center.style.textAlign = "center";
+</script>
+</body>
+</html>

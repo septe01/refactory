@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test 3 Refactory</title>
+</head>
+<body>
+	<div id="center">
+		<h2 id="jdl"></h2>
+		<button id="click">Click Me</button>
+	</div>
+<script>
+	var center = document.getElementById('center');
+	var jdl = document.getElementById('jdl');
+	var click = document.getElementById('click').addEventListener("click", function(){
+		var str = parseInt(prompt("menentukan ganjil genap :"));
+		var text = ' : ';
+		if(str % 2 == 1){
+			alert('Ganjil');
+		}else if(str % 2 == 0){
+			alert("Genap");
+		}else{
+			alert('yang dimasukan harus angka.');
+		}
+	});
+	jdl.innerHTML = "Ganjil atau Genap?";
+	center.style.textAlign = "center";
+
+</script>
+</body>
+</html>

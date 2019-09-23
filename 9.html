@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test 9 Refactory</title>
+</head>
+<body>
+	<div id="center">
+		<h2 id="jdl"></h2>
+		<button id="click">Click Me</button>
+	</div>
+<script>
+	var center = document.getElementById('center');
+	var jdl = document.getElementById('jdl');
+	var click = document.getElementById('click').addEventListener("click", function(){
+		var str = prompt("Input Kan Kata :");
+
+		var strArray = str.split(" ");
+
+        for(var i = strArray.length; i > 0; i--){
+            	document.write(strArray[i-1]+' ');
+        }
+	});
+	jdl.innerHTML = "Membalikkan Kata";
+	center.style.textAlign = "center";
+	
+</script>
+</body>
+</html>

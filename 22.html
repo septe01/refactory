@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test 22 Refactory</title>
+</head>
+<body>
+    <div id="center">
+        <h2 id="jdl"></h2>
+        <h4 id="arr">Result Console</h4>
+        <div id="hsl"></div>
+    </div>
+<script>
+    var center = document.getElementById('center');
+    var jdl = document.getElementById('jdl');
+
+    function CToK(C) 
+	{ 
+	    console.log('celciusToKelvin '+(C + 273.15)); 
+	}
+
+    function KToC(kelvin) {
+		if (kelvin < (0)) {
+			console.log('below absolute zero (0 K)');
+		} else {
+			console.log('kelvinToCelius '+(kelvin-273.15));
+		}
+	}
+
+    function cToF(celsius) 
+	{
+	  const cTemp = celsius;
+	  const cToFahr = cTemp * 9 / 5 + 32;
+	  const message = `${cToFahr} \xB0F.`;
+	    console.log('celciusToFahrenheit '+message);
+	}
+
+	function fToC(fahrenheit) 
+	{
+	  const fTemp = fahrenheit;
+	  const fToCel = (fTemp - 32) * 5 / 9;
+	  const message = `${fToCel}\xB0C.`;
+	    console.log('fahrenheitToCelcius '+message);
+	} 
+	// Input: fahrenheitToKelvin(234)
+	function fTok(kel) {
+		var message =  (kel + 459.67)* 5/9;
+		console.log('fahrenheitToKelvin '+message);
+	}
+	// Input: kelvinToFahrenheit(203)
+	function kToF(k){
+		const message = k * 9/5 - 459.67;
+		console.log('kelvinToFahrenheit '+message);
+	}
+	
+	CToK(80);
+	KToC(298.15)
+	cToF(22);
+	fToC(36.5);
+	fTok(234)
+	kToF(203);
+
+    
+
+    jdl.innerHTML = "Temprature Converter";
+    center.style.textAlign = "center";
+    
+</script>
+</body>
+</html>

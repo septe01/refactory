@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test 10 Refactory</title>
+</head>
+<body>
+	<div id="center">
+		<h2 id="jdl"></h2>
+		<button id="click">Click Me</button>
+		<h4 id="hsil"></h4>
+	</div>
+<script>
+	var center = document.getElementById('center');
+	var jdl = document.getElementById('jdl');
+	var hsil = document.getElementById('hsil');
+	const stuff = ['Meja', 'Buku', 'Topi', 'Baju', 'Kayu'];
+	stuff.forEach(function(element) {
+	    hsil.innerHTML = stuff;
+	});
+	var click = document.getElementById('click').addEventListener("click", function(){
+		var str = prompt("Input Kan Kata :");
+		var str2 = prompt("Input Kan Kata :");
+
+		const stuff = ['Meja', 'Buku', 'Topi', 'Baju', 'Kayu'];
+		stuff.unshift(str);
+		stuff.push(str2);
+
+		stuff.forEach(function(element) {
+		    hsil.innerHTML = stuff;
+		});
+
+	});
+	jdl.innerHTML = "Add to Array";
+	center.style.textAlign = "center";
+	
+</script>
+</body>
+</html>

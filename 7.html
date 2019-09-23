@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test 7 Refactory</title>
+</head>
+<body>
+	<div id="center">
+		<h2 id="jdl"></h2>
+		<button id="click">Click Me</button>
+	</div>
+<script>
+	var center = document.getElementById('center');
+	var jdl = document.getElementById('jdl');
+	var click = document.getElementById('click').addEventListener("click", function(){
+		var num = parseInt(prompt("Input bilang 1 - 100:"));
+
+		for(var i = 1; i <= num; i++){
+			if(i % 2 == 1){
+				document.write(i+' Ganjil<br>');
+			}
+		}
+
+	});
+	jdl.innerHTML = "50 Bilangan Ganjil";
+	center.style.textAlign = "center";
+	
+</script>
+</body>
+</html>
